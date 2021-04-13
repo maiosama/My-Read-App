@@ -23,6 +23,11 @@ body, .app {
   margin: 0;
   color: white;
 }
+.list-books-title blockquote{
+  font-size: x-large;
+  margin: 0;
+  color: rgb(216, 231, 247);
+}
 
 .list-books-content {
   padding: 0 0 80px;
