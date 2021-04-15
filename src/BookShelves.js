@@ -6,15 +6,11 @@ import { FaBook} from 'react-icons/fa';
 
 //
 class BookShelves extends Component {
-    static propTypes={
-        books : PropTypes.array.isRequired
-    }
 
     render() {
         const {books, shelfChanger} =this.props;
         console.log(this.props);
-        // const shelfChanger = this.props
-        const currentlyReading = books.filter(book => book.shelf === 'currentlyReading');
+        // const shelfBooks = books.filter(book => book.shelf === shelf);
         // const wantToRead = books.filter(book => book.shelf === 'wantToRead');
         // const read = books.filter(book => book.shelf === 'read');
         console.log('book shelves:', books)
@@ -32,7 +28,7 @@ class BookShelves extends Component {
 
                 {/* Currently Read Shelf */}
                 <Shelf 
-                    books={currentlyReading}
+                    books={books}                    
                     shelf='currentlyReading'
                     shelfTitle={ "Currently Reading"}
                     shelfChanger={shelfChanger}
@@ -59,5 +55,10 @@ class BookShelves extends Component {
         )
     }
 }
+    BookShelves.propTypes={
+        books : PropTypes.array.isRequired,
+        shelfChanger: PropTypes.func.isRequired
+    }
+
 
 export default BookShelves
