@@ -8,7 +8,7 @@ class Book extends Component{
     
     selectShelf =(book)=>{
         const findBook = [...this.props.books].filter((bk) =>bk.id === book.id);
-        if(findBook.len>0){
+        if(findBook.length>0){
             return findBook[0].shelf;
         }
         return "none"
