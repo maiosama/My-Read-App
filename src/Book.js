@@ -11,7 +11,7 @@ class Book extends Component{
         if(findBook.len>0){
             return findBook[0].shelf;
         }
-        return 'none'
+        return "none"
     };
 
     render(){
@@ -58,9 +58,7 @@ class Book extends Component{
 
 }
 Book.propTypes={
-    book : PropTypes.object.isRequired,
-    // selectShelf: PropTypes.func.isRequired
-
+    book : PropTypes.object.isRequired
 }
 
 export default Book;

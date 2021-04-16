@@ -14,7 +14,7 @@ class SearchPage extends Component {
         BooksAPI.search(event.target.value)
         .then(books =>{
             // update the state with the search results
-            if(('error' in books)|| (typeof books === 'undefined')){
+            if((typeof books === 'undefined')||('error' in books) ){
                 this.setState(prevState => ({ books :[]}));
             }else{
                 this.setState(prevState => (({books: books}))
@@ -49,7 +49,10 @@ class SearchPage extends Component {
                     <div className="search-books-results">
                         {(this.state.books.length >0) &&
                         <ol className="books-grid">
-                        {this.state.books.map(book => <Book books={books} key={book.id} shelfChanger={shelfChanger} book ={book}/>)} </ol>}
+                        {this.state.books.map(book => <Book books={books} key={book.id} shelfChanger={shelfChanger} book ={book}/>)} 
+                        </ol>}
+                        {(this.state.books.length <=0)&&
+                        <h2 className = "empty-search"> Type the name of the book or the author to find a book to add to your library</h2>}
                     </div>
                 </div>
         )    

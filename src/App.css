@@ -131,6 +131,13 @@ button:active {
 .search-books-results {
   padding: 80px 10px 20px;
 }
+.empty-search{
+  padding: 80px 10px 20px;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+  color: rgb(128, 138, 138);
+}
 
 /* books grid */
 
@@ -141,6 +148,7 @@ button:active {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  color: #0f4b61;
 }
 
 .books-grid li {
