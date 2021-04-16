@@ -19,7 +19,7 @@ class SearchPage extends Component {
             }else{
                 this.setState(prevState => (({books: books}))
                 )}
-                console.log("serachpage", this.state.books)
+                // console.log("serachpage", this.state.books)
         })
         // handle the errors if any
     .catch(error =>{

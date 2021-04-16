@@ -9,11 +9,11 @@ class BookShelves extends Component {
 
     render() {
         const {books, shelfChanger} =this.props;
-        console.log(this.props);
+        // console.log(this.props);
         // const shelfBooks = books.filter(book => book.shelf === shelf);
         // const wantToRead = books.filter(book => book.shelf === 'wantToRead');
         // const read = books.filter(book => book.shelf === 'read');
-        console.log('book shelves:', books)
+        // console.log('book shelves:', books)
 
         return (
             <div>

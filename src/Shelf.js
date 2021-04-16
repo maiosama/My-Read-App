@@ -12,7 +12,7 @@ class Shelf extends Component {
         // const shelf = this.props
         // const shelfChanger=this.props;
         const shelfBooks= books.filter(book =>book.shelf ===shelf);
-        console.log("shelf page", this.props)
+        // console.log("shelf page", this.props)
 
         return (
             <div className="list-books">

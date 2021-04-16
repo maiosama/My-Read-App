@@ -17,13 +17,13 @@ class BooksApp extends React.Component {
         .then((books)=>{
             this.setState({books});
         })
-        .then(()=> {console.log ("apps page books: ", this.state.books)
-    })
+        // .then(()=> {console.log ("apps page books: ", this.state.books)
+    // })
     };
     // send a request to the BookAPI to update the book shelf in the back end
     shelfChanger= (book,updatedShelf)=>{
         BooksAPI.update(book,updatedShelf)
-        .then(response=>{book.shelf=updatedShelf;});
+       book.shelf=updatedShelf;
         
         const books=[...this.state.books].filter((each)=> each.id!==book.id).concat(book);
         this.setState({books});

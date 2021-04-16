@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Book extends Component{
     changeShelf =(event) =>{
-        this.props.shelfChanger(this.props.books , event.target.value)
+        this.props.shelfChanger(this.props.book , event.target.value)
     }
     
     selectShelf =(book)=>{
