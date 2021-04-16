@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import Book from './Book'
+import { FaBookReader} from 'react-icons/fa';
+
 
 class Shelf extends Component {
     // state={
@@ -24,7 +26,7 @@ class Shelf extends Component {
                         <div className="bookshelf">
 
                             <h2 className="bookshelf-title">
-                                {this.props.shelfTitle}                            
+                               <FaBookReader/> {this.props.shelfTitle}                            
                             </h2> 
 
                             < div className = "bookshelf-books" > 
